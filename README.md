@@ -4,9 +4,9 @@ Welcome to the Recipe Exchange Forum, an interactive online community for sharin
 
 ## Features:
 
--Recipe Submission: Users can upload their own recipes, complete with ingredients, instructions, and images.
--Browsing and Searching: Easily navigate through various categories or use filters to find specific recipes based on cuisine, dietary needs, or ingredients.
--User Profiles: Create and customize your profile to share your culinary journey, save favorite recipes, and follow other cooks.
--Community Interaction: Engage with other users through comments, upvotes/downvotes, and private messaging.
--Culinary Challenges and Discussions: Participate in community-driven cooking challenges and thematic discussions.
--Social Media Integration: Share your favorite recipes or cooking achievements on other social media platforms.
+- Recipe Submission: Users can upload their own recipes, complete with ingredients, instructions, and images.
+- Browsing and Searching: Easily navigate through various categories or use filters to find specific recipes based on cuisine, dietary needs, or ingredients.
+- User Profiles: Create and customize your profile to share your culinary journey, save favorite recipes, and follow other cooks.
+- Community Interaction: Engage with other users through comments, upvotes/downvotes, and private messaging.
+- Culinary Challenges and Discussions: Participate in community-driven cooking challenges and thematic discussions.
+- Social Media Integration: Share your favorite recipes or cooking achievements on other social media platforms.
