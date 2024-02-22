@@ -1,4 +1,4 @@
-﻿# simplyDelicious-Website
+﻿# SimplyDelicious-Website
 
 Welcome to the Recipe Exchange Forum, an interactive online community for sharing and discovering a wide array of culinary delights. This platform is designed to cater to food enthusiasts of all levels, from home cooks to professional chefs. Here, users can contribute recipes, engage in discussions, and explore the vast world of cooking.
 
