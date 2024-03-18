@@ -1,0 +1,553 @@
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+  }
+
+  body {
+    overflow-y: scroll;
+  }
+  
+  .header-logo {
+    flex: 1;
+  }
+  
+  .header-logo, .auth-buttons {
+    flex-shrink: 0;
+  }
+  
+  /* Styling for the navigation bar */
+  .header-nav {
+    flex: 2;
+    display: flex;
+    gap: 100px;
+  }
+  
+  /* Prevents the navigation buttons from getting too close */
+  .header-nav a {
+    min-width: 300px;
+    margin-top: 20px;
+    flex-grow: 1;
+    font-size: 60px;
+    font-family: "Damion", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .header-nav a, .header-nav a:hover{
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* Search container styling */
+.search-container {
+  display: flex;
+  align-items: center;
+  flex-basis: 250px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  transition: flex-basis 0.3s ease;
+  margin-right: 500px;
+  margin-top: 20px;
+  border: 1px #000000;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin-top: 15px;
+  font-size: 40px;
+}
+
+.search-input {
+  width: 100%;
+  height: 65%;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 15px;
+  font-size: 30px;
+}
+  
+  /* When the input is focused, it takes up 500px width */
+  .search-input:focus {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .profile-container {
+    position: relative;
+    text-align: right;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
+  
+  #toggler {
+    opacity: 0;
+    pointer-events: none;
+    touch-action: none;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 20px;
+    gap: 5px;
+    right: 0;
+  }
+  input:checked ~ .dropdown {
+    display: flex;
+  }
+  
+  .profile-container img {
+    width: 76px;
+    height: 75px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  #profilePicture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Makes the image circular */
+  }
+
+  .nutrition-facts {
+    position: relative;
+    top: -120px;
+    background-color: #f5eded;
+    padding: 30px;
+    width: 300px;
+    margin-top: -380px;
+    margin-left: 20px;
+    margin-bottom: -20px;
+    border-radius: 20px;
+    /* other styles */
+}
+
+.nutrition-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px; /* space between items */
+}
+
+.nutrition-label {
+    /* styles for the label */
+}
+
+.nutrition-value {
+    font-weight: bold;
+    /* styles for the value */
+}
+
+  /* Recipe Section */
+#recipe {
+    /* Styles for the recipe section */
+}
+
+.author-info {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.recipe-image .img-fluid {
+    width: 1100px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.row .col-md-12 {
+  display: flex;
+  align-items: center; /* Vertically align items in the center */
+}
+
+.recipe-image {
+  flex-grow: 1; /* Allows the image to take up the available space */
+}
+
+.highlight-votebuttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  flex-shrink: 0; /* Prevents the buttons from shrinking */
+  gap: 40px;
+  margin-left: 20px; /* Space between image and buttons */
+}
+
+.voting-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+.recipecard-votebuttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.load-more {
+  display: block; /* Ensure the button is a block-level element */
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: auto; /* Center the button horizontally */
+  margin-right: auto; /* Center the button horizontally */
+  font-size: 16px;
+}
+
+button.upvote, button.downvote {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #dedbdb;
+  color: #000000;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Ensure your image container is full width if needed */
+.col-md-12 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.recipes-container {
+  display: flex;
+  align-items: center;
+  width: 1700px;
+  margin: 0 auto;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 1450px;
+}
+
+.recipe-section h2 {
+  display: inline-block;
+  align-self: stretch;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  font-weight: bold;
+  font-family: "Abril Fatface", serif;
+  font-size: 40px;
+  color: black;
+}
+
+.recipe-card {
+  width: 450px;
+  height: 500px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+}
+
+.recipe-info {
+  padding: 1em;
+}
+
+.recipe-interactions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ingredientslist {
+    padding-left: 0;
+    list-style-type: none;
+    margin-bottom: -300px;
+}
+
+.ingredients-title {
+    font-size: 40px;
+    font-family: "Abril Fatface", serif;
+    font-weight: 800;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.ingredientslist li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Spacing between items */
+    font-family: "Yantramanav", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.ingredientslist h5 {
+    margin-left: 0;
+    font-family: "ABeeZee", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.instructions-title {
+    font-size: 40px;
+    font-family: "Abril Fatface", serif;
+    font-weight: 800;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.instructions-list {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.instructions-list ol,
+.instructions-list ul {
+    padding-left: 20px;
+}
+
+.instructions-list li {
+    margin-bottom: 10px;
+    font-family: "Yantramanav", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+/* This will style the nested <ol> to look indented */
+.instructions-list ol > li {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+.instructions-list h5 {
+    margin-bottom: 10px;
+    font-family: "ABeeZee", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.recipe-title {
+    font-size: 60px;
+    font-family: "Abril Fatface", serif;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+#recommendations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 20%;
+  transform: translateX(-10%);
+}
+
+.recommended-recipes {
+  font-weight: bold;
+  font-family: "Abril Fatface", serif;
+  font-size: 40px;
+  color: black;
+  margin-bottom: 1em;
+  margin-top: 50px;
+}
+
+.recommended-recipes h2 {
+  text-align: center;
+}
+
+/* Styling for the custom checkbox */
+.ingredient-checkbox {
+    display: none; /* Hide the default checkbox */
+}
+
+.custom-checkbox-label {
+    margin-top: 7px;
+    margin-right: 10px; /* Space between checkbox and text */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    border: 1px solid #dcdcdc;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Style when checkbox is checked */
+.ingredient-checkbox:checked + .custom-checkbox-label {
+    background-color: #000; /* Black background */
+    border-color: #000; /* Black border */
+}
+
+/* Checkmark style when checkbox is checked */
+.ingredient-checkbox:checked + .custom-checkbox-label::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 1px;
+    width: 8px;
+    height: 14px;
+    border: solid #fff; /* White checkmark */
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    color: #000000;
+}
+
+/* Comments Section CSS */
+.comments-container {
+  margin: 0;
+  width: 1140px;
+}
+
+.comment-list {
+  margin-bottom: 2rem;
+}
+
+.comment {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comment-header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.profile-pic {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  border-radius: 50%; /* Circular image */
+  margin-right: 10px;
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+.comment-author-and-time {
+  flex-grow: 1;
+}
+
+.comment-author {
+  font-weight: bold;
+  margin: 0;
+}
+
+.comment-time {
+  color: #999;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.comment-text {
+  margin: 0.5rem 0;
+  font-size: 20px;
+}
+
+.comment-actions {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.comment-reply, .comment-likes {
+  color: #000000; /* Bootstrap primary color */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.comment-likes {
+  cursor: pointer;
+}
+
+.comment-likes i {
+  margin-right: 0.3rem;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.btn-primary {
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+}
+
+#comments h2 {
+    font-size: 40px;
+    font-family: "Abril Fatface", serif;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the space between items as needed */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.author-image {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Adjust the size as needed */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-name {
+  font-weight: bold;
+}
+
+.post-date {
+  display: flex;
+  align-items: center;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+}
+
+.fa-clock, .fa-comment {
+  margin-right: 5px; /* Adjust the space between icon and text as needed */
+}

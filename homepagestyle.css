@@ -1,0 +1,676 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+.header-logo {
+  flex: 1;
+}
+
+.header-logo, .auth-buttons {
+  flex-shrink: 0;
+}
+
+/* Styling for the navigation bar */
+.header-nav {
+  flex: 2;
+  display: flex;
+  gap: 100px;
+}
+
+/* Prevents the navigation buttons from getting too close */
+.header-nav a {
+  min-width: 300px;
+  margin-top: 20px;
+  flex-grow: 1;
+  font-size: 60px;
+  font-family: "Damion", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header-nav a, .header-nav a:hover{
+  color: black;
+  text-decoration: none;
+}
+
+/* Search container styling */
+.search-container {
+  display: flex;
+  align-items: center;
+  flex-basis: 250px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  transition: flex-basis 0.3s ease;
+  margin-right: 500px;
+  margin-top: 20px;
+  border: 1px #000000;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin-top: 15px;
+  font-size: 40px;
+}
+
+.search-input {
+  width: 100%;
+  height: 65%;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 15px;
+  font-size: 30px;
+}
+
+/* When the input is focused, it takes up 500px width */
+.search-input:focus {
+  opacity: 1;
+  visibility: visible;
+}
+
+.profile-container {
+  position: relative;
+  text-align: right;
+  margin-top: 40px;
+  margin-right: 40px;
+}
+
+#toggler {
+  opacity: 0;
+  pointer-events: none;
+  touch-action: none;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 20px;
+  gap: 5px;
+  right: 0;
+}
+
+input:checked ~ .dropdown {
+  display: flex;
+}
+
+.profile-container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.login-options {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.header-profile {
+  padding: 5px;
+}
+
+/* Login Modal and button styling */
+#loginButtonNav {
+ border-radius: 20px;
+}
+
+#profilePicture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.loginButton {
+  border-radius: 20px;
+}
+
+#loginForm button {
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: white;
+  font-size: 20px;
+}
+.modal-custom-height {
+  height: 650px !important;
+}
+
+.modal-dialog {
+  max-width: 800px;
+  margin: 30px auto;
+  height: 800px;
+}
+.modal-content {
+  height: 600px;
+}
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid black !important;
+}
+.modal-header .close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.modal-header .btn-back {
+  align-self: flex-start;
+}
+
+#loginModalLabel.modal-title {
+  font-family: "Abril Fatface", serif; 
+  font-weight: 800; 
+  font-style: normal; 
+  font-size: 30px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-body hr {
+  width: 110%;
+  border: 0;
+  height: 1px;
+  background-color: #000000;
+  margin: 30px 0;
+}
+
+#googleLogin {
+  padding: 20px;
+  border-radius: 50px;
+  width: 300px;
+  background-color: white;
+  margin-top: 20px;
+}
+
+#googleLogin .fa-google {
+  font-size: 20px;
+  vertical-align: middle;
+}
+#username {
+  margin-bottom: 10px;
+}
+
+#username, #password {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  width: 100%;
+  font-size: 20px;
+  padding-right: 30px;
+}
+
+#loginForm {
+  margin-top: 10px;
+}
+
+.login-options {
+  /* Styles for forgot password and sign up links */
+}
+
+#signupModal .modal-body {
+  overflow-x: auto;
+}
+
+#signupButtonNav {
+  border-radius: 20px;
+}
+
+#signupModalLabel.modal-title {
+  font-family: "Abril Fatface", serif; 
+  font-weight: 800; 
+  font-style: normal; 
+  font-size: 30px;
+}
+
+#signupForm input {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.error {
+  font-family: "Abril Fatface", serif;
+  font-size: 20px;
+}
+
+#signupForm .signupButton {
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  background-color: white;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#signupForm h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.show-pass {
+  position: absolute;
+  right: 10px; /* Adjust as needed */
+  top: 25px;  /* Adjust as needed */
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.show-login-pass {
+  position: absolute;
+  right: 10px; /* Adjust based on your preferences */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  /* Adjust the size of the icon as needed */
+}
+
+.progress .progress-bar-danger {
+  background-color: #e90f10;
+}
+.progress .progress-bar-warning {
+  background-color: #ffad00;
+}
+.progress .progress-bar-success {
+  background-color: #02b502;
+}
+
+.fa-eye {
+  color: #000000;
+  cursor: pointer;
+}
+
+.fa-circle {
+  font-size: 6px;
+}
+
+.fa-check {
+  color: #02b502;
+}
+
+#forgotUsernameForm input {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#forgotPasswordForm input {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.btn-back {
+  margin-right: auto;
+  color: black;
+  font-size: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styling for auth buttons */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+.btn-auth {
+  flex-shrink: 0;
+  font-size: 30px;
+  margin-right: 20px;
+  background-color: white;
+  padding: 10px 20px;
+}
+
+/* General styles for the recipe highlight section */
+.recipe-highlight {
+    width: 1700px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    background-color: #bad7f4;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  .recipe-highlight-image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+  }
+
+  @media (max-width: 992px) {
+    .recipe-highlight-image img {
+      width: 96%;
+      height: 96%;
+    }
+    .recipe-highlight {
+      width: 75%;
+      height: 75%;
+    }
+  }
+
+  /* Styling for the recipe highlight title */
+  .recipe-highlight-title {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    font-size: 80px;
+    font-family: "Abril Fatface", serif;
+    font-weight: 800;
+    font-style: normal;
+    color:black;
+    width: 80%;
+    margin: 20px auto auto auto;
+  }
+  
+  .emoji-stars {
+    position: relative;
+    display: inline-block;
+    top: 50px;
+    left: -120px;
+  }
+
+  /* Styling for the recipe highlight description */
+  .recipe-highlight-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 56px;
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    width: 80%;
+    margin: 40px auto auto auto;
+  }
+
+  /* Remove link underline when user hovers over navigation button */
+  .recipe-highlight a:hover {
+    text-decoration: none;
+  }
+
+  .recipe-highlight-title, .recipe-highlight-description {
+    flex: 1;
+  }
+
+#popular-categories-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  padding: 50px 0;
+}
+
+#popular-categories-section h2 {
+  font-weight: bold;
+  font-family: "Abril Fatface", serif;
+  font-size: 40px;
+  color: black;
+  margin-bottom: 20px; 
+}
+
+.categories-container h3 {
+  font-family: "Damion", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: row;
+  text-align: center; 
+  align-items: center;
+  margin: 10px; 
+}
+
+.category-card img {
+  margin-top: 30px;;
+  margin-right: 20px;
+  width: 350px;
+  height: 350px;
+}
+
+.category-card h3 {
+  color: black;
+}
+
+.category-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover; 
+  border-radius: 50%; 
+  margin-bottom: 10px; 
+}
+
+.category-name {
+  font-size: 1.8em; 
+  color: black;
+  margin-top: 10px;
+}
+
+.recipe-section {
+  max-width: 1700px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe-info h3 {
+  font-weight: bold;
+  font-family: "Abril Fatface", serif;
+  font-size: 30px;
+  color: black;
+}
+
+.recipes-container {
+  width: 1700px;
+  height: auto;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.recipe-section h2 {
+  display: inline-block;
+  align-self: stretch;
+  margin-left: 0px;
+  margin-right: auto;
+  text-align: left;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  font-weight: bold;
+  font-family: "Abril Fatface", serif;
+  font-size: 40px;
+  color: black;
+}
+
+.recipe-card {
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
+  flex: 1;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+}
+
+.recipe-info {
+  padding: 1em;
+}
+
+.recipe-interactions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.voting-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Styling for upvote and downvote buttons */
+.voting-buttons button.upvote, .voting-buttons button.downvote {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #dedbdb;
+  margin-top: -40px;
+  margin-bottom: 40px;
+  color: #000000;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.voting-buttons button.upvote:hover, .voting-buttons button.downvote:hover {
+  background-color: #ccc;
+}
+
+.voting-buttons .downvote {
+}
+
+.recipe-interactions .comments {
+  display: flex;
+  align-items: center;
+}
+
+.recipe-interactions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.fa {
+  margin-right: 0.5em;
+}
+
+/* Style the recipe difficulty labels */
+.recipe-difficulty {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Style based on difficulty */
+.easy .recipe-difficulty {
+  background-color: #90EE90;
+}
+
+.medium .recipe-difficulty {
+  background-color: #FFD700;
+}
+
+.hard .recipe-difficulty {
+  background-color: #FF6347;
+}
+
+#latest-recipes {
+  text-align: center;
+  padding: 20px;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.recipe-title {
+  font-size: 16px;
+  color: #333;
+  padding: 8px;
+  margin: 0;
+}
+
+.load-more {
+  display: block; /* Make the button a block-level element */
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: auto; /* Set the left margin to auto */
+  margin-right: auto; /* Set the right margin to auto */
+  font-size: 16px;
+}
+
+.load-more:hover {
+  background-color: #555;
+}
+
+.latestrecipestitle {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Abril Fatface", serif;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
